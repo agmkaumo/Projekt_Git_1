@@ -35,29 +35,35 @@ Komend jest bardzo wiele, a kazda posiada wiele dodatkowych opcji. Jednak dla uz
 
 ===
 
-X. Mechanizmy działania //, cechy// i porownanie z innymi systemami
+X. Mechanizmy przechowywania danych //, cechy// i porownanie z innymi systemami
 Zadanie serwera.
 Migawki
 Inne systemy.
 
-Jest systemem rozproszonym, a więc cały kod źródlowy programu i pełna lista zmian jest przechowywana u kazdego programisty biorącego udział w tworzeniu oprogramowania. Serwer używany będzie do synchronizacji pracy. Niemal wszystkie operacje wykonuje sie lokalnie. Na serwer wysylany jest koncowy rezultat, o ile rozwiazane sa wszystkie konflikty. Niekiedy konieczne moze byc zatwierdzenie zmian przez innych programistow, w zaleznosci od ustawien.
+Jest systemem rozproszonym, a więc cały kod źródlowy programu i pełna lista zmian jest przechowywana u kazdego programisty biorącego udział w tworzeniu oprogramowania. Serwer używany będzie do synchronizacji pracy. Niemal wszystkie operacje wykonuje sie lokalnie, dzieki czemu niezwykle rosnie szybkosc. Na serwer wysylany jest koncowy rezultat, o ile rozwiazane sa wszystkie konflikty. Niekiedy konieczne moze byc zatwierdzenie zmian przez innych programistow, w zaleznosci od ustawien.
+https://git-scm.com/book/en/v2/images/distributed.png
 
-Git nie jest jedynym systemem kontroli wersji, inne popularne to np. Mericurial czy ClearCase. Jednak to Git zdobyl najwieksza popularnosc z powodow, ostatnimi czasy nawet Microsoft przeniosl kod zrodlowy Windowsa na Gita.
+https://git-scm.com/book/en/v2/images/snapshots.png
+Git przechowuje dane jako zestaw migawek, czy tez stanow (ang. snapshots) wszystkich plikow danego projektu. Za kazdym razem gdy w plikach zostaly zrobione jakies zmiany, ktore nastepnie zostaly zapisane (tzw. commit), Git tworzy obraz przedstawiający to jak wyglądają wszystkie pliki w danym momencie i przechowuje odnosnik (referencję) do tej migawki. W celu uzyskania dobrej wydajności, jeśli dany plik nie został zmieniony, Git nie zapisuje ponownie tego pliku, a tylko referencję do jego poprzedniej, identycznej wersji.
+
+Git nie jest jedynym systemem kontroli wersji, inne popularne to np. Mericurial czy ClearCase. Jednak to Git zdobyl najwieksza popularnosc, ostatnimi czasy nawet Microsoft przeniosl kod zrodlowy Windowsa na Gita.
 
 Cechy Gita w porownaniu z innymi systemami kontroli wersji
 1. W pelni darmowy.
 2. Otwarty - powszechnie dostepny kod zrodlowy, wraz z mozliwoscia swobodnego modyfikowania na wlasne potrzeby.
-3. Lekki i szybki - w przeciwienstwie do wielu innych systemow, operacje w Gicie sa szybkie, a sam kod nie zajmuje wiele miejsca. Dzieje sie to z powodu jego budowy, o ktorej byla juz mowa w Mechanizmy działania.
-4. Rozproszony
+3. Lekki i szybki - w przeciwienstwie do wielu innych systemow, operacje w Gicie sa szybkie, a sam kod nie zajmuje wiele miejsca. Większość pozostałych systemów przechowuje informacje jako listę zmian na plikach, a nie zestaw migawek.
+4. Rozproszony - wiekszosc pozostalych systemow jest stale polaczona z serwerem i kazda operacja przez niego przechodzi.
+
+
 
 ===
 
 X. Po co system kontroli wersji i dlaczego nie szerowany dysk?
 Glowne i najbardziej oczywiste powody dla ktorych uzywa sie systemow kontroli wersji, a nie na przyklad share'owanego dysku to:
-1. Pelna kontrola danych
-2. Historia zmian, wraz z autorami zmian
-3. Brak mozliwosci przypadkowego nadpisania - uzywajac
-4. 
+1. Pelna kontrola danych - w kazdym momencie mamy dostep do kazdej pojedynczej zmiany w kazdym pojedynczym pliku na dowolnej wersji oprogramowania.
+2. Historia zmian, wraz z autorami zmian - kazda zmiana dokladnie opisana, z data i autorem.
+3. Brak mozliwosci przypadkowego nadpisania - uzywajac VCS zapewniamy sobie mozliwosc weryfikacji zmian danych. W share'owanym dysku jedna osoba kopiujac po prostu by nadpisala starszy plik. Zagladanie do kazdego pliku celem sprawdzenia potencjalnych pominetych zmian jest bardzo niepraktyczne, a w przypadku duzych plikow niezwykle czasochlonne.
+4. Dzieki galeziom mozna dowolnie tworzyc rozne wersje tego samego oprogramowania, wiec nie musi istniec tylko jedna wersja oprogramowania, jesli jest taka potrzeba.
 
 ===
 

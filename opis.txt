@@ -1,10 +1,10 @@
-W poniższej prezentacji będzie stosowana zamiennie nomenktaura 
+W poniższej prezentacji będzie stosowana zamiennie nomenktaura VCS = Version Control System = System kontroli wersji
 
 [OK] 1. Historia gita.
 2. Wykrozystanie/zastosowania gita.
 Cechy
 Porównanie z innymi
-Linia komend, komendy / nakladki
+[OK] Linia komend, komendy / nakladki
 3. Zasada działania w praktyce.
 4. Mechanizmy działania.
 Serwer i tak dalej
@@ -14,44 +14,52 @@ branchowanie, tagowanie
 
 X. Spis tresci
 
+===
+
 X. Wprowadzenie
-Git jest programem i systemem służącym do kontroli wersji, powszechnie stosowanym w tworzeniu oprogramowania. Używany jest do śledzenia zmian w plikach, koordynacji pracy programistow piszących i modyfikujących kod źródłowy danego oprogramowania. Jest systemem rozproszonym, a więc cały kod źródlowy programu i pełna lista zmian jest przechowywana u kazdego programisty biorącego udział w tworzeniu oprogramowania. Serwer używany będzie do synchronizacji pracy. Może być używany do wersjonowania każdego rodzaju plików, ale najczęściej korzysta się z niego do kontroli kodu źródłowego programow komputerowych, czyli de facto plików tekstowych. Z tego powodu może być również wykorzystywany poza programistycznymi zastosowaniami, np. do kontroli dokumentów.
-
-X. Zapoznanie sie i zasada dzialania w praktyce
-
-X. Mechanizmy działania.
-
-
+Git jest programem i systemem służącym do kontroli wersji, powszechnie stosowanym w tworzeniu oprogramowania. Używany jest do śledzenia zmian w plikach, koordynacji pracy programistow piszących i modyfikujących kod źródłowy danego oprogramowania. Może być używany do wersjonowania każdego rodzaju plików, ale najczęściej korzysta się z niego do kontroli kodu źródłowego programow komputerowych, czyli de facto plików tekstowych. Z tego powodu może być również wykorzystywany poza programistycznymi zastosowaniami, np. do kontroli dokumentów.
 
 Git jest wolnym oprogramowaniem działającym na licencji GNU GPL. Oznacza to, że jest programem darmowym, który każdy może uruchamiać, a także modyfikować, ponieważ licencja GNU GPL oznacza, że kod źródłowy programu jest otwarty, to znaczy dostępny dla wszystkich.
 
 Pierwsze wydanie Gita pojawilo w sie w 2005 roku. Jego tworca jest Linus Torvalds, znany tez ze stworzenia Linuksa, systemu operacyjnego powszechnie stosowanego w zastosowaniach teleinformatycznych, ale tez do uzytku osobistego, czego najepszym przykladem w ostatnich latach jest Android. Stworzono go, by zastąpić poprzednio używany w rozwoju Linuksa, niebędący wolnym oprogramowaniem, system kontroli wersji BitKeeper. 
 
+===
+
+X. Zapoznanie sie i zasada dzialania w praktyce.
+
+===
+
+X. Nakadki graficzne
+Gitem sterujemy domyślnie z poziomu linii poleceń, a więc za pomocą komend tekstowych. Taka metoda daje nam największą elastyczność i możliwości. Przykładowo komenda, która sprawi, że pobierzemy z serwera o nazwie "origin" ostatnie zmiany innych użytkowników to git pull "origin", natomiast stworzenie commita z opisem to git commit -m "Opis commita"
+Komend jest bardzo wiele, a kazda posiada wiele dodatkowych opcji. Jednak dla uzytownika zazwyczaj wygodniejsze bedzie korzystanie z nakladek graficznych, w ktorych do wiekszosci powszechnych komend mamy graficzne przyciski, a takze czytelniejsze wyswietlanie zmian czy listy plikow. W tej prezentacji korzystamy z nakladki GitExtensions.
+
+===
+
+X. Mechanizmy działania //, cechy// i porownanie z innymi systemami
+Zadanie serwera.
+Migawki
+Inne systemy.
+
+Jest systemem rozproszonym, a więc cały kod źródlowy programu i pełna lista zmian jest przechowywana u kazdego programisty biorącego udział w tworzeniu oprogramowania. Serwer używany będzie do synchronizacji pracy. Niemal wszystkie operacje wykonuje sie lokalnie. Na serwer wysylany jest koncowy rezultat, o ile rozwiazane sa wszystkie konflikty. Niekiedy konieczne moze byc zatwierdzenie zmian przez innych programistow, w zaleznosci od ustawien.
+
 Git nie jest jedynym systemem kontroli wersji, inne popularne to np. Mericurial czy ClearCase. Jednak to Git zdobyl najwieksza popularnosc z powodow, ostatnimi czasy nawet Microsoft przeniosl kod zrodlowy Windowsa na Gita.
 
 Cechy Gita w porownaniu z innymi systemami kontroli wersji
 1. W pelni darmowy.
-2. Otwarty - powszechnie dostepny kod zrodlowy, wraz z mozliwoscia swobodnego modyfikowania
-3. Lekki - w przeciwienstwie do wielu innych systemow, operacje w Gicie sa szybkie, a sam kod nie zajmuje wiele miejsca. Dzieje sie to z powodu jego budowy, o ktorej byla juz mowa w Mechanizmy działania.
+2. Otwarty - powszechnie dostepny kod zrodlowy, wraz z mozliwoscia swobodnego modyfikowania na wlasne potrzeby.
+3. Lekki i szybki - w przeciwienstwie do wielu innych systemow, operacje w Gicie sa szybkie, a sam kod nie zajmuje wiele miejsca. Dzieje sie to z powodu jego budowy, o ktorej byla juz mowa w Mechanizmy działania.
 4. Rozproszony
 
+===
 
-=====
-
-
-Po co system kontroli wersji i dlaczego nie szerowany dysk?
-Dwa glowne i najbardziej oczywiste powody dla ktorych uzywa sie systemow kontroli wersji, a nie na przyklad share'owanego dysku to:
+X. Po co system kontroli wersji i dlaczego nie szerowany dysk?
+Glowne i najbardziej oczywiste powody dla ktorych uzywa sie systemow kontroli wersji, a nie na przyklad share'owanego dysku to:
 1. Pelna kontrola danych
-2. Historia zmian
+2. Historia zmian, wraz z autorami zmian
 3. Brak mozliwosci przypadkowego nadpisania - uzywajac
+4. 
 
-
-=====
-
-
-Nakadki graficzne
-Gitem sterujemy domyślnie z poziomu linii poleceń, a więc za pomocą komend tekstowych. Taka metoda daje nam największą elastyczność i możliwości. Przykładowo komenda, która sprawi, że pobierzemy z serwera o nazwie "origin" ostatnie zmiany innych użytkowników to git pull "origin", natomiast stworzenie commita z opisem to git commit -m "Opis commita"
-Komend jest bardzo wiele, a kazda posiada wiele dodatkowych opcji. Jednak dla uzytownika zazwyczaj wygodniejsze bedzie korzystanie z nakladek graficznych, w ktorych do wiekszosci powszechnych komend mamy graficzne przyciski, a takze czytelniejsze wyswietlanie zmian czy listy plikow. W tej prezentacji korzystamy z nakladki GitExtensions.
+===
 
 
 
@@ -92,8 +100,10 @@ Nie lubię sernika z ciastem francuskim.
 
 
 
-
+https://github.com/agmkaumo/Torun.git
 
 https://www.vogella.com/tutorials/Git/article.html
 https://learngitbranching.js.org/?locale=pl
 https://git-scm.com/book/pl/v2/Pierwsze-kroki-Podstawy-Git
+https://miro.medium.com/max/1600/1*xKFLNc2Qws4C6zkMVBWGaA.png
+https://medium.com/@onejohi/git-understanding-the-basics-ba004a20dacc

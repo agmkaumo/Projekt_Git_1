@@ -4,12 +4,13 @@ W poniższej prezentacji będzie stosowana zamiennie nomenktaura
 2. Wykrozystanie/zastosowania gita.
 Cechy
 Porównanie z innymi
-Linia komend, komendy / klienty
+Linia komend, komendy / nakladki
 3. Zasada działania w praktyce.
 4. Mechanizmy działania.
 Serwer i tak dalej
 GitHub
-Repo, komit, branch, merge, konflikt, pull request
+Repo, komit, branch, merge, konflikt, pull request, blame
+branchowanie, tagowanie
 
 X. Spis tresci
 
@@ -22,7 +23,9 @@ X. Zapoznanie sie i praktyczna zasada dzialania
 
 Git jest wolnym oprogramowaniem działającym na licencji GNU GPL. Oznacza to, że jest programem darmowym, który każdy może uruchamiać, a także modyfikować, ponieważ licencja GNU GPL oznacza, że kod źródłowy programu jest otwarty, to znaczy dostępny dla wszystkich.
 
-Git nie jest jedynym systemem kontroli wersji, inne popularne to np. Mericurial czy ClearCase. Jednak to Git zdobyl 
+Pierwsze wydanie Gita pojawilo w sie w 2005 roku. Jego tworca jest Linus Torvalds, znany tez ze stworzenia Linuksa, systemu operacyjnego powszechnie stosowanego w zastosowaniach teleinformatycznych, ale tez do uzytku osobistego, czego najepszym przykladem w ostatnich latach jest Android. Stworzono go, by zastąpić poprzednio używany w rozwoju Linuksa, niebędący wolnym oprogramowaniem, system kontroli wersji BitKeeper. 
+
+Git nie jest jedynym systemem kontroli wersji, inne popularne to np. Mericurial czy ClearCase. Jednak to Git zdobyl najwieksza popularnosc z powodow, ostatnimi czasy nawet Microsoft przeniosl kod zrodlowy Windowsa na Gita.
 
 Cechy Gita w porownaniu z innymi systemami kontroli wersji
 

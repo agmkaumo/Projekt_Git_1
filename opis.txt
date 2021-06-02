@@ -11,17 +11,30 @@ Serwer i tak dalej
 GitHub
 Repo, komit, branch, merge, konflikt, pull request
 
-Wprowadzenie
-Git jest programem i systemem służącym do kontroli wersji, powszechnie stosowanym w tworzeniu oprogramowania. Używany jest do śledzenia zmian w plikach, koordynacji pracy programistow piszących i modyfikujących kod źródłowy danego oprogramowania. Jest systemem rozproszonym, a więc cały kod źródlowy programu i pełna lista zmian jest przechowywana u kazdego programisty biorącego udział w tworzeniu oprogramowania. Serwer używany będzie do synchronizacji pracy. Może być używany do wersjonowania każdego rodzaju plików, ale najczęściej korzysta się z niego do kontroli kodu źródłowego, czyli de facto plików tekstowych. Z tego  powodu może być również wykorzystywany poza programistycznymi zastosowaniami, np. do kontroli dokumentów.
+X. Spis tresci
+
+X. Wprowadzenie
+Git jest programem i systemem służącym do kontroli wersji, powszechnie stosowanym w tworzeniu oprogramowania. Używany jest do śledzenia zmian w plikach, koordynacji pracy programistow piszących i modyfikujących kod źródłowy danego oprogramowania. Jest systemem rozproszonym, a więc cały kod źródlowy programu i pełna lista zmian jest przechowywana u kazdego programisty biorącego udział w tworzeniu oprogramowania. Serwer używany będzie do synchronizacji pracy. Może być używany do wersjonowania każdego rodzaju plików, ale najczęściej korzysta się z niego do kontroli kodu źródłowego programow komputerowych, czyli de facto plików tekstowych. Z tego powodu może być również wykorzystywany poza programistycznymi zastosowaniami, np. do kontroli dokumentów.
+
+X. Zapoznanie sie i praktyczna zasada dzialania
+
+
 
 Git jest wolnym oprogramowaniem działającym na licencji GNU GPL. Oznacza to, że jest programem darmowym, który każdy może uruchamiać, a także modyfikować, ponieważ licencja GNU GPL oznacza, że kod źródłowy programu jest otwarty, to znaczy dostępny dla wszystkich.
+
+Git nie jest jedynym systemem kontroli wersji, inne popularne to np. Mericurial czy ClearCase. Jednak to Git zdobyl 
+
+Cechy Gita w porownaniu z innymi systemami kontroli wersji
 
 
 =====
 
 
 Po co system kontroli wersji i dlaczego nie szerowany dysk?
-Dwa glowne i najbardziej oczywiste powody dla ktorych uzywa sie systemow
+Dwa glowne i najbardziej oczywiste powody dla ktorych uzywa sie systemow kontroli wersji, a nie na przyklad share'owanego dysku to:
+1. Pelna kontrola danych
+2. Historia zmian
+3. Brak mozliwosci przypadkowego nadpisania - uzywajac
 
 
 =====

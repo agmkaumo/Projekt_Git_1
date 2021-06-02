@@ -1,0 +1,77 @@
+W poniższej prezentacji będzie stosowana zamiennie nomenktaura 
+
+1. Historia gita.
+2. Wykrozystanie/zastosowania gita.
+Cechy
+Porównanie z innymi
+Linia komend, komendy / klienty
+3. Zasada działania w praktyce.
+4. Mechanizmy działania.
+Serwer i tak dalej
+GitHub
+Repo, komit, branch, merge, konflikt, pull request
+
+Wprowadzenie
+Git jest programem i systemem służącym do kontroli wersji, powszechnie stosowanym w tworzeniu oprogramowania. Używany jest do śledzenia zmian w plikach, koordynacji pracy programistow piszących i modyfikujących kod źródłowy danego oprogramowania. Jest systemem rozproszonym, a więc cały kod źródlowy programu i pełna lista zmian jest przechowywana u kazdego programisty biorącego udział w tworzeniu oprogramowania. Serwer używany będzie do synchronizacji pracy. Może być używany do wersjonowania każdego rodzaju plików, ale najczęściej korzysta się z niego do kontroli kodu źródłowego, czyli de facto plików tekstowych. Z tego  powodu może być również wykorzystywany poza programistycznymi zastosowaniami, np. do kontroli dokumentów.
+
+Git jest wolnym oprogramowaniem działającym na licencji GNU GPL. Oznacza to, że jest programem darmowym, który każdy może uruchamiać, a także modyfikować, ponieważ licencja GNU GPL oznacza, że kod źródłowy programu jest otwarty, to znaczy dostępny dla wszystkich.
+
+
+=====
+
+
+Po co system kontroli wersji i dlaczego nie szerowany dysk?
+Dwa glowne i najbardziej oczywiste powody dla ktorych uzywa sie systemow
+
+
+=====
+
+
+Nakadki graficzne
+Gitem sterujemy domyślnie z poziomu linii poleceń, a więc za pomocą komend tekstowych. Taka metoda daje nam największą elastyczność i możliwości. Przykładowo komenda, która sprawi, że nasze pobierzemy z serwera o nazwie "origin" ostatnie zmiany innych użytkowników to git pull "origin", natomiast stworzenie commita z opisem to git commit -m "Opis commita"
+Komend jest bardzo wiele, a kazda posiada wiele dodatkowych opcji. Jednak dla uzytownika zazwyczaj wygodniejsze bedzie korzystanie z nakladek graficznych, w ktorych do wiekszosci powszechnych komend mamy graficzne przyciski, a takze czytelniejsze wyswietlanie zmian. W tej prezentacji korzystamy z nakladki GitExtensions.
+
+
+
+===============
+
+
+Ala.txt
+Ala ma jednego burego kota.
+
+
+Sernik.txt
+Lubię sernik z ciastem francuskim.
+
+
+KtosInny.txt
+Ten plik został stworzony przez innego użytkownika. Właśnie pobrałam ten plik na moje lokalne repozytorium. // zwrócenie uwagi, że możemy ten plik zmienić, to nie jest "nasz" plik, to jest plik na repo.
+
+
+
+1. Ala.txt create // Ala_I_Serniki
+2. Sernik.txt create // Ala_I_Serniki
+3. Na gicie: KtosInny.txt
+4. Pull request.
+5. Push.
+6. Na gicie: zmiana Ala.txt
+7. Pull request - pokazanie, że Ala.txt zmienione.
+8. Na gicie: zmiana Sernik.txt i loklanie zmiana Sernik.txt
+9. Pull request - pokazanie konfliktu.
+
+Ala.txt
+Ala ma dwa rude koty.
+
+Sernik.txt
+Kocham sernik z ciastem francuskim ponad wszystko.
+
+Sernik.txt
+Nie lubię sernika z ciastem francuskim.
+
+
+
+
+
+https://www.vogella.com/tutorials/Git/article.html
+https://learngitbranching.js.org/?locale=pl
+https://git-scm.com/book/pl/v2/Pierwsze-kroki-Podstawy-Git

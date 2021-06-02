@@ -1,14 +1,21 @@
+SLOWNICZEK
+commit - 
+merge - 
+repozytorium - 
+galaz - 
+
+
 W poniższej prezentacji będzie stosowana zamiennie nomenktaura VCS = Version Control System = System kontroli wersji
 
 [OK] 1. Historia gita.
 2. Wykrozystanie/zastosowania gita.
-Cechy
-Porównanie z innymi
+[OK] Cechy
+[OK] Porównanie z innymi
 [OK] Linia komend, komendy / nakladki
 3. Zasada działania w praktyce.
-4. Mechanizmy działania.
-Serwer i tak dalej
-GitHub
+[OK] 4. Mechanizmy działania.
+[ok] Serwer i tak dalej
+[nie] GitHub
 Repo, komit, branch, merge, konflikt, pull request, blame
 branchowanie, tagowanie
 
@@ -26,6 +33,16 @@ Pierwsze wydanie Gita pojawilo w sie w 2005 roku. Jego tworca jest Linus Torvald
 ===
 
 X. Zapoznanie sie i zasada dzialania w praktyce.
+Gita wykorzystuje sie przede wszystkim w tworzeniu oprogramowania. Ze wzgledu na brak takich umiejetnosci autorek ponizsze przyklady pokazane sa na zwyklym tekscie. Nalezy pamietac, ze programowanie w dowlonym jezyku jest niezwykle sprecyzowane i znacznie bardziej wrazliwe na zmiane chociazby pojedynczego znaku niz zwyczajny tekst.
+
+Git pozwala sledzic zmiany w plikach i w sposob skordynowany kontrolowac prace progamistow. Zapobiega rowniez ewentualnym konfliktom, czyli sytuacjom, gdzie dwie osoby zaczynaja dzialac na pewnym pliku, pierwsza konczy prace wczesniej i zapisuje zmiany, a druga pozniej i przy probie zapisania zmian jest ostrzegana, ze plik zostal w czasie jej pracy zmieniony i nalezy rozwiazac konflikty.
+
+commit
+branch
+tag
+konflikt
+
+Powyzsze przyklady nie wyczerpuja pelnych mozliwosci gita. Do niektorych nieopisanych naleza tagowanie (wyroznienie konkretnego commita, np. nazwa wersji), blame (wyszczeglonienie jacy uztkownicy ostatnio zmieniali poszczegolne fragmenty pliku), zaawansowane metody laczenia (merge'owania) i inne.
 
 ===
 
@@ -36,10 +53,6 @@ Komend jest bardzo wiele, a kazda posiada wiele dodatkowych opcji. Jednak dla uz
 ===
 
 X. Mechanizmy przechowywania danych //, cechy// i porownanie z innymi systemami
-Zadanie serwera.
-Migawki
-Inne systemy.
-
 Jest systemem rozproszonym, a więc cały kod źródlowy programu i pełna lista zmian jest przechowywana u kazdego programisty biorącego udział w tworzeniu oprogramowania. Serwer używany będzie do synchronizacji pracy. Niemal wszystkie operacje wykonuje sie lokalnie, dzieki czemu niezwykle rosnie szybkosc. Na serwer wysylany jest koncowy rezultat, o ile rozwiazane sa wszystkie konflikty. Niekiedy konieczne moze byc zatwierdzenie zmian przez innych programistow, w zaleznosci od ustawien.
 https://git-scm.com/book/en/v2/images/distributed.png
 
@@ -84,14 +97,14 @@ KtosInny.txt
 Ten plik został stworzony przez innego użytkownika. Właśnie pobrałam ten plik na moje lokalne repozytorium. // zwrócenie uwagi, że możemy ten plik zmienić, to nie jest "nasz" plik, to jest plik na repo.
 
 
-
+0. Plik poczatkowy na mainie, ewentualnie sam commit.
 1. Ala.txt create // Ala_I_Serniki
 2. Sernik.txt create // Ala_I_Serniki
 3. Na gicie: KtosInny.txt
-4. Pull request.
-5. Push.
+4. Pull request. // widzimy nowy plik
+5. Push. // merge i wyslamy, inni uzytkownicy po pobraniu zmian beda widziec ale i sernik
 6. Na gicie: zmiana Ala.txt
-7. Pull request - pokazanie, że Ala.txt zmienione.
+7. Pull request - pokazanie, że Ala.txt zmienione. Plik nie jest nasz de facto
 8. Na gicie: zmiana Sernik.txt i loklanie zmiana Sernik.txt
 9. Pull request - pokazanie konfliktu.
 
